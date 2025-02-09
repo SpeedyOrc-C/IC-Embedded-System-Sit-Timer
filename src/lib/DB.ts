@@ -63,12 +63,11 @@ export class DB
         return rows[0].user_id as string
     }
 
-    public static async GetDevices(key: string)
+    public static async GetDevices(userId: string)
     {
-        const {rows} = await sql`select device.device_id, device.name
-                                 from session
-                                          natural join "user"
-                                          natural join device`
+        const {rows} = await sql`select device_id, name
+                                 from device
+                                 where owner = ${userId}`
 
         return rows as { device_id: string, name: string }[]
     }
@@ -151,7 +150,7 @@ export class DB
             return null
         }
 
-        return { id, code }
+        return {id, code}
     }
 
     public static async UserConfirmPairing(key: string, code: string)
@@ -178,8 +177,11 @@ export class DB
 
         const newDeviceId = rows[0].new_device_id as string
 
-        try{
-            await sql`delete from pairing where new_device_id = ${newDeviceId}`
+        try
+        {
+            await sql`delete
+                      from pairing
+                      where new_device_id = ${newDeviceId}`
 
             await sql`insert into device (device_id, owner)
                       values (${newDeviceId}, ${user})`
