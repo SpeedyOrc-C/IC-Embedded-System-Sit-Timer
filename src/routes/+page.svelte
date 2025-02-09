@@ -1,1 +1,11 @@
-<p>你好世界</p>
+<svelte:head>
+    <title>While You Seat</title>
+</svelte:head>
+
+<main>
+
+</main>
+
+<style>
+
+</style>
