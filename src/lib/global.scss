@@ -7,11 +7,21 @@
 .my-btn {
     @extend .my-border;
 
+    user-select: none;
+    -webkit-user-select: none;
     cursor: pointer;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+
+    &.has-text {
+        justify-content: space-between;
+    }
+
+    fill: #333;
+    color: #333;
 
     &:disabled {
         cursor: not-allowed;
@@ -25,6 +35,11 @@
 
     &:hover {
         background: #333;
+        color: white;
+
+        &.critical {
+            background: orangered;
+        }
 
         & > svg {
             fill: white;
@@ -38,8 +53,6 @@
 
     & > svg {
         height: 80%;
-        width: 80%;
-
-        fill: #333;
+        aspect-ratio: 0.8;
     }
 }
