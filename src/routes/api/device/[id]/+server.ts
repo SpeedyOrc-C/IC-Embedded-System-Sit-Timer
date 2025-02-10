@@ -1,5 +1,17 @@
 import {DB} from "$lib/DB";
 
+export async function GET({params: {id}})
+{
+    const win = await DB.DoesDeviceExist(id)
+
+    if (!win)
+    {
+        return new Response("Device not found", {status: 404})
+    }
+
+    return new Response("Hi!")
+}
+
 export async function DELETE({cookies, params: {id}})
 {
     const key = cookies.get("session-key")

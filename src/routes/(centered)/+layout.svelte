@@ -10,11 +10,11 @@
 
 <style>
     .wrapper-out {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        overflow: hidden;
+        width: 100%;
+
+        & > div {
+            width: fit-content;
+            margin: 0 auto;
+        }
     }
 </style>

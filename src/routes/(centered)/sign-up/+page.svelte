@@ -40,7 +40,7 @@
     }
 </script>
 
-<form>
+<form onsubmit={SignUp}>
     <p>
         <label for="username">
             Username
@@ -62,7 +62,7 @@
         <input type="password" name="confirm-password" bind:value={confirmPassword}>
     </p>
 
-    <button type="button" onclick={SignUp} disabled={signupBtnDisabled}>
+    <button type="submit" disabled={signupBtnDisabled}>
         Sign up
     </button>
 

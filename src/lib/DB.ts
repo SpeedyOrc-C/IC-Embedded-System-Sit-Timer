@@ -11,6 +11,15 @@ function RandomHexString(length: number)
 
 export class DB
 {
+    public static async DoesDeviceExist(id: string)
+    {
+        const {rows} = await sql`select
+                                 from device
+                                 where device_id = ${id}`
+
+        return rows.length > 0
+    }
+
     public static async SignUp(username: string, password: string)
     {
         const salt = RandomHexString(8)

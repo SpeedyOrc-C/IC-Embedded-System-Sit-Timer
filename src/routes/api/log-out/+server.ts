@@ -1,6 +1,6 @@
 import {DB} from "$lib/DB";
 
-export async function GET({cookies})
+export async function POST({cookies})
 {
     const key = cookies.get("session-key")
 

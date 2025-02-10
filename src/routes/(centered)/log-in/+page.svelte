@@ -43,7 +43,7 @@
         <input type="password" name="password" bind:value={password}>
     </p>
 
-    <button type="submit" disabled={loginBtnDisabled}>
+    <button type="submit" disabled={loginBtnDisabled} class="my-btn">
         Log in
     </button>
 
@@ -52,7 +52,9 @@
     </p>
 </form>
 
-<style>
+<style lang="scss">
+    @import "$lib/global.scss";
+
     form {
         width: 100%;
         max-width: 21rem;
