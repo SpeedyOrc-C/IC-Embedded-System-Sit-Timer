@@ -49,6 +49,22 @@ export class DB
         return key
     }
 
+    public static async LogOut(key: string)
+    {
+        await sql`delete
+                  from session
+                  where key = ${key}`
+    }
+
+    public static async LogOutFromAllPlaces(key: string)
+    {
+        await sql`delete
+                  from session
+                  where user_id = (select user_id
+                                   from session
+                                   where key = ${key})`
+    }
+
     public static async GetUserId(key: string)
     {
         const {rows} = await sql`select user_id
@@ -144,8 +160,7 @@ export class DB
 
             await sql`insert into pairing (new_device_id, code)
                       values (${id}, ${code})`
-        }
-        catch (e)
+        } catch (e)
         {
             return null
         }
@@ -185,8 +200,7 @@ export class DB
 
             await sql`insert into device (device_id, owner)
                       values (${newDeviceId}, ${user})`
-        }
-        catch (e)
+        } catch (e)
         {
             return null
         }

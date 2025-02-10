@@ -6,7 +6,12 @@
 
 <style>
     :global(body) {
-        margin: 1rem;
+        margin: 0;
+        color: #333;
         font-family: -apple-system, sans-serif;
+    }
+
+    :global(*) {
+        box-sizing: border-box;
     }
 </style>
