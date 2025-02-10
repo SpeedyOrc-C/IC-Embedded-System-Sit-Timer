@@ -1,6 +1,6 @@
 import {DB} from "$lib/DB";
 
-export async function GET()
+export async function POST()
 {
     const res = await DB.DeviceRequestPairing()
 
