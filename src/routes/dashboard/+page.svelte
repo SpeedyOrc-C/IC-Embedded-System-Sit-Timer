@@ -282,7 +282,9 @@
     @import "$lib/global.scss";
 
     main {
-        margin: 1rem;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        width: fit-content;
     }
 
     #account-operations {
