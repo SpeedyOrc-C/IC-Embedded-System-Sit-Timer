@@ -6,8 +6,6 @@
         existence
     }))
 
-    console.log(logs)
-
     // Remove first "stand up" record
     if (logs.length > 0 && !logs[0].existence)
     {
@@ -110,5 +108,13 @@
     th, td {
         padding: 0.5rem 0.8rem;
         font-size: 1rem;
+    }
+
+    th {
+        border-bottom: 3px solid #333;
+    }
+
+    td {
+        border-top: 1px solid #333;
     }
 </style>

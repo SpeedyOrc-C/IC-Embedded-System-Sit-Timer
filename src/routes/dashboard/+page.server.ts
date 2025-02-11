@@ -6,14 +6,14 @@ export async function load({cookies})
 
     if (!sessionKey)
     {
-        return {userId: null}
+        throw new Error("Not logged in")
     }
 
     const userId = await DB.GetUserId(sessionKey)
 
     if (userId == null)
     {
-        return {userId}
+        throw new Error("Not logged in")
     }
 
     const devices = await DB.GetDevices(userId)

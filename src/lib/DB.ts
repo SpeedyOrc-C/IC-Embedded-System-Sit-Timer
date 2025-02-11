@@ -262,7 +262,7 @@ export class DB
                                        and device_id = ${id}
                                      order by time asc`
 
-            return rows as { time: Date, existence: boolean }[]
+            return rows as { time: string, existence: boolean }[]
         }
         catch (e)
         {
