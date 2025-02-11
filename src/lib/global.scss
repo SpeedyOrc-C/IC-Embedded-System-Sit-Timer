@@ -26,9 +26,11 @@
     &:disabled {
         cursor: not-allowed;
 
-        &:hover, &:active {
+
+        &, &:hover, &:active {
+            color: #3338;
             background: white;
-            box-shadow: 0 0 0 1px #333, 4px 4px 0 1px #0003;
+            box-shadow: 0 0 0 1px #3338, 4px 4px 0 1px #0002;
             transform: unset;
         }
     }

@@ -62,7 +62,7 @@
         <input type="password" name="confirm-password" bind:value={confirmPassword}>
     </p>
 
-    <button type="submit" disabled={signupBtnDisabled}>
+    <button type="submit" disabled={signupBtnDisabled} class="my-btn">
         Sign up
     </button>
 
@@ -71,7 +71,9 @@
     </p>
 </form>
 
-<style>
+<style lang="scss">
+    @use "$lib/global.scss";
+
     form {
         width: 100%;
         max-width: 21rem;

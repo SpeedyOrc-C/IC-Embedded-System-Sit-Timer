@@ -53,7 +53,7 @@
 </form>
 
 <style lang="scss">
-    @import "$lib/global.scss";
+    @use "$lib/global.scss";
 
     form {
         width: 100%;

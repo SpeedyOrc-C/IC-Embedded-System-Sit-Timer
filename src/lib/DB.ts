@@ -169,7 +169,8 @@ export class DB
 
             await sql`insert into pairing (new_device_id, code)
                       values (${id}, ${code})`
-        } catch (e)
+        }
+        catch (e)
         {
             return null
         }
@@ -209,11 +210,42 @@ export class DB
 
             await sql`insert into device (device_id, owner)
                       values (${newDeviceId}, ${user})`
-        } catch (e)
+        }
+        catch (e)
         {
             return null
         }
 
         return newDeviceId
+    }
+
+    public static async LogYes(id: string)
+    {
+        try
+        {
+            await sql`insert into log (device_id, existence)
+                      values (${id}, true)`
+        }
+        catch (e)
+        {
+            return false
+        }
+
+        return true
+    }
+
+    public static async LogNo(id: string)
+    {
+        try
+        {
+            await sql`insert into log (device_id, existence)
+                      values (${id}, false)`
+        }
+        catch (e)
+        {
+            return false
+        }
+
+        return true
     }
 }
