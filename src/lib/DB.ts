@@ -248,4 +248,25 @@ export class DB
 
         return true
     }
+
+    public static async GetLogs(key: string, id: string)
+    {
+        try
+        {
+            const {rows} = await sql`select time, existence
+                                     from session
+                                              natural join "user"
+                                              natural join device
+                                              natural join log
+                                     where key = ${key}
+                                       and device_id = ${id}
+                                     order by time asc`
+
+            return rows as { time: Date, existence: boolean }[]
+        }
+        catch (e)
+        {
+            return null
+        }
+    }
 }
