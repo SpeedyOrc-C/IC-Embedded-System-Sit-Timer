@@ -1,49 +1,7 @@
 <script lang="ts">
+    import {goto} from "$app/navigation";
+
     const {data} = $props()
-
-    const logs: { time: Date, existence: boolean }[] = data.logs.map(({time, existence}) => ({
-        time: new Date(time),
-        existence
-    }))
-
-    // Remove first "stand up" record
-    if (logs.length > 0 && !logs[0].existence)
-    {
-        logs.shift()
-    }
-
-    // Remove last "stand down" record
-    if (logs.length > 0 && logs[logs.length - 1].existence)
-    {
-        logs.pop()
-    }
-
-    const normalizedLogs: { time: Date, existence: boolean }[] = []
-
-    if (logs.length > 0)
-    {
-        let {existence: lastExistence} = logs[0]
-
-        normalizedLogs.push(logs[0])
-
-        logs.shift()
-
-        for (const log of logs)
-        {
-            if (log.existence !== lastExistence)
-            {
-                normalizedLogs.push(log)
-                lastExistence = log.existence
-            }
-        }
-    }
-
-    const intervals: { start: Date, end: Date }[] = []
-
-    for (let i = 0; i < normalizedLogs.length / 2; i += 1)
-    {
-        intervals.push({start: normalizedLogs[i * 2].time, end: normalizedLogs[i * 2 + 1].time})
-    }
 
     function ReadableDuration(ms: number)
     {
@@ -76,7 +34,19 @@
     <title>Logs for {data.name}</title>
 </svelte:head>
 
-<p>Disclaimer: Your data will not be disclosed to the public nor be used in any research.</p>
+<nav style="display: flex; justify-content: space-between; align-items: center;">
+    <button id="btn-back" class="my-btn" onclick={() => goto("/dashboard")}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+    </button>
+
+    <div id="name" style="flex-grow: 1; text-align: center">
+        {data.name}
+    </div>
+</nav>
+
+<p id="disclaimer">
+    Disclaimer: Your data will not be disclosed to the public nor be used in any research.
+</p>
 
 <table class="my-border">
 
@@ -88,7 +58,7 @@
     </thead>
 
     <tbody>
-    {#each intervals.toReversed() as {start, end}}
+    {#each data.intervals.toReversed() as {start, end}}
         <tr>
             <td>{start.toLocaleString()}</td>
             <td>{ReadableDuration(end.getTime() - start.getTime())}</td>
@@ -116,5 +86,19 @@
 
     td {
         border-top: 1px solid #333;
+    }
+
+    #btn-back {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    #name {
+        font-size: 1.5rem;
+    }
+
+    #disclaimer {
+        font-size: 0.8rem;
+        color: #666;
     }
 </style>

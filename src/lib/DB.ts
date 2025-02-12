@@ -219,27 +219,19 @@ export class DB
         return newDeviceId
     }
 
-    public static async LogYes(id: string)
+    public static async Log(id: string, existence: boolean, timestamp: number | null = null)
     {
         try
         {
-            await sql`insert into log (device_id, existence)
-                      values (${id}, true)`
-        }
-        catch (e)
-        {
-            return false
-        }
-
-        return true
-    }
-
-    public static async LogNo(id: string)
-    {
-        try
-        {
-            await sql`insert into log (device_id, existence)
-                      values (${id}, false)`
+            if (timestamp == null)
+            {
+                await sql`insert into log (device_id, existence)
+                          values (${id}, ${existence})`
+            } else
+            {
+                await sql`insert into log (device_id, existence, time)
+                          values (${id}, ${existence}, to_timestamp(${timestamp})::timestamp)`
+            }
         }
         catch (e)
         {

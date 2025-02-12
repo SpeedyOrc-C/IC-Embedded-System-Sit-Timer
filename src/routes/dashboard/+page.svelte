@@ -228,12 +228,8 @@
         {#each data.devices as {name, device_id}, index}
             <article class="my-border">
                 <div style="display: flex; gap: 1rem; justify-content: space-between; align-items: center">
-                    <header>
-                        {name}
-                    </header>
-                    <code>
-                        {device_id.slice(0, 8)}
-                    </code>
+                    <header>{name}</header>
+                    <code>{device_id.slice(0, 8)}</code>
                 </div>
 
                 <br>
