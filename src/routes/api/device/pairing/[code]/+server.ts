@@ -16,5 +16,5 @@ export async function GET({cookies, params: {code}})
         return new Response("Invalid code", {status: 400})
     }
 
-    return new Response(JSON.stringify({newDeviceId}))
+    return new Response(newDeviceId)
 }

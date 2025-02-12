@@ -122,7 +122,7 @@
                 return
             }
 
-            const {newDeviceId} = await res.json()
+            const newDeviceId = await res.text()
 
             data.devices.unshift({name: "Untitled Device", device_id: newDeviceId})
         } finally
