@@ -58,7 +58,7 @@
             return
         }
 
-        if (!confirm(`Are you sure you want to delete ${data.devices[index].name}?`))
+        if (!confirm(`Deleting a device will also delete its logs.\nAre you sure you want to delete ${data.devices[index].name}?`))
         {
             return
         }

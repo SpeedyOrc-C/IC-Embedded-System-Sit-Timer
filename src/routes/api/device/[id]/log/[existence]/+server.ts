@@ -1,25 +1,28 @@
-import {DB} from "$lib/DB";
+import {DB, type LogResponse} from "$lib/DB";
 
 export async function POST({params: {id, existence}})
 {
-    let win: boolean
+    let result: LogResponse
 
     switch (existence)
     {
         case "yes":
-            win = await DB.Log(id, true)
+            result = await DB.Log(id, true)
             break
         case "no":
-            win = await DB.Log(id, false)
+            result = await DB.Log(id, false)
             break
         default:
             return new Response("Parameter existence must be \"yes\" or \"no\"", {status: 400})
     }
 
-    if (!win)
+    switch (result)
     {
-        return new Response("Device not found or duplicated record", {status: 400})
+        case "inserted":
+            return new Response("WIN")
+        case "duplicated":
+            return new Response("Duplicated record", {status: 202})
+        case "invalid-device":
+            return new Response("Device not found", {status: 404})
     }
-
-    return new Response("WIN")
 }

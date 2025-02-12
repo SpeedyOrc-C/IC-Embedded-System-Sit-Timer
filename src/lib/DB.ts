@@ -9,6 +9,8 @@ function RandomHexString(length: number)
         .join('')
 }
 
+export type LogResponse = 'inserted' | 'duplicated' | 'invalid-device'
+
 export class DB
 {
     public static async DoesDeviceExist(id: string)
@@ -219,7 +221,7 @@ export class DB
         return newDeviceId
     }
 
-    public static async Log(id: string, existence: boolean, timestamp: number | null = null)
+    public static async Log(id: string, existence: boolean, timestamp: number | null = null): Promise<LogResponse>
     {
         try
         {
@@ -235,10 +237,15 @@ export class DB
         }
         catch (e)
         {
-            return false
+            if (e.code === "23505")
+            {
+                return 'duplicated'
+            }
+
+            return 'invalid-device'
         }
 
-        return true
+        return 'inserted'
     }
 
     public static async GetLogs(key: string, id: string)
