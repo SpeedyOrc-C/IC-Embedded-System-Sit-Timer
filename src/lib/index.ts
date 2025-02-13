@@ -1,1 +1,4 @@
-// place files you want to import through the `$lib` alias in this folder.
+export function PadZero(n: number)
+{
+    return n < 10 ? `0${n}` : n
+}

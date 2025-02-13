@@ -1,17 +1,12 @@
 <script lang="ts">
-    import {goto} from "$app/navigation";
+    import {PadZero} from "$lib";
 
     const {data} = $props()
-
-    function PadZero(n: number)
-    {
-        return n < 10 ? `0${n}` : n
-    }
 
     const now = new Date()
 
     let intervalMs = $state(1000 * 60 * 60)
-    let startDateString = $state(`${now.getFullYear()}-${PadZero(now.getMonth())}-${PadZero(now.getDate())}T04:00:00`)
+    let startDateString = $state(`${now.getFullYear()}-${PadZero(now.getMonth()+1)}-${PadZero(now.getDate())}T04:00:00`)
 
     const startDate = $derived(new Date(startDateString))
     const endDate = $derived(new Date(startDate.getTime() + 1000 * 60 * 60 * 24))
@@ -70,32 +65,12 @@
     })
 </script>
 
-<svelte:head>
-    <title>Statistics</title>
-</svelte:head>
-
-<nav style="display: flex; justify-content: space-between; align-items: center;">
-    <button id="btn-back" class="my-btn" onclick={() => goto("/dashboard")} style="height: 3rem; width: 3rem">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-        </svg>
-    </button>
-
-    <div id="name" style="flex-grow: 1; text-align: center; font-size: 1.5rem">
-        Statistics of All Devices
-    </div>
-</nav>
-
-<br>
-
 <div style="display: flex; justify-content: center; align-items: center;">
     <div>
         Starts at
     </div>
 
-    <input type="datetime-local" name="" id="" bind:value={startDateString} class="my-border">
-
+    <input type="datetime-local" bind:value={startDateString} class="my-border">
 </div>
 
 <br>
@@ -160,7 +135,7 @@
 <br>
 
 <style lang="scss">
-    @use "$lib/global.scss";
+    @use "$lib/global";
 
     input[type="datetime-local"], select {
         font-size: 1.2rem;
