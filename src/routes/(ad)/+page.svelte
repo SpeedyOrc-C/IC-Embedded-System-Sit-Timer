@@ -26,10 +26,19 @@
       breaks, so you can maintain a healthier, more active lifestyle.
     </p>
     <p>
-      Ready to dive deeper? Visit our <a href="about">About</a> page to
-      learn how SitSense works, or check out our
+      Ready to dive deeper? Visit our <a href="about">About</a> page to learn
+      how SitSense works, or check out our
       <a href="pricing">Pricing</a> to find a plan that fits your needs.
     </p>
+  </section>
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <h2>Watch Our Overview</h2>
+    <!-- svelte-ignore a11y_media_has_caption -->
+    <video controls>
+      <source src="/marketing-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </section>
 </main>
 
@@ -44,5 +53,5 @@
 </footer>
 
 <style lang="scss">
-    @use "$lib/style";
+  @use "$lib/style";
 </style>
