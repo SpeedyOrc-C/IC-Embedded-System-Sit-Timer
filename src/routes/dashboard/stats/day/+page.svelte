@@ -52,7 +52,7 @@
                 const startIndex = Math.floor((start.getTime() - startDate.getTime()) / intervalMs)
                 const endIndex = Math.floor((end.getTime() - startDate.getTime()) / intervalMs)
 
-                for (let i = startIndex; i < endIndex; i++)
+                for (let i = startIndex; i <= endIndex; i++)
                 {
                     data[i] = true
                 }
