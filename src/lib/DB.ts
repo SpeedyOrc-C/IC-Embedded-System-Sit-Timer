@@ -9,6 +9,53 @@ function RandomHexString(length: number)
         .join('')
 }
 
+export function IntervalsFromLogs(_logs: { time: Date; existence: boolean }[]): { start: Date, end: Date }[]
+{
+    const logs = _logs.slice()
+
+    // Remove first "stand up" record
+    if (logs.length > 0 && !logs[0].existence)
+    {
+        logs.shift()
+    }
+
+    // Remove last "stand down" record
+    if (logs.length > 0 && logs[logs.length - 1].existence)
+    {
+        logs.pop()
+    }
+
+    const normalizedLogs: { time: Date, existence: boolean }[] = []
+
+    if (logs.length > 0)
+    {
+        let {existence: lastExistence} = logs[0]
+
+        normalizedLogs.push(logs[0])
+
+        logs.shift()
+
+        for (const log of logs)
+        {
+            if (log.existence != lastExistence)
+            {
+                normalizedLogs.push(log)
+                lastExistence = log.existence
+            }
+        }
+    }
+
+    const intervals: { start: Date, end: Date }[] = []
+
+    for (let i = 0; i < normalizedLogs.length / 2; i += 1)
+    {
+        intervals.push({start: normalizedLogs[i * 2].time, end: normalizedLogs[i * 2 + 1].time})
+    }
+
+    return intervals
+}
+
+
 export type LogResponse = 'inserted' | 'duplicated' | 'invalid-device'
 
 export class DB
@@ -104,7 +151,7 @@ export class DB
         const {rows} = await sql`select name
                                  from session
                                           natural join "user"
-                                          natural join device
+                                        join device on "user".user_id = device.owner
                                  where key = ${key}
                                    and device_id = ${id}`
 
@@ -121,7 +168,7 @@ export class DB
         const {rows} = await sql`select user_id
                                  from session
                                           natural join "user"
-                                          natural join device
+                                          join device on "user".user_id = device.owner
                                  where key = ${key}
                                    and device_id = ${id}`
 
@@ -142,7 +189,7 @@ export class DB
         const {rows} = await sql`select user_id
                                  from session
                                           natural join "user"
-                                          natural join device
+                                          join device on "user".user_id = device.owner
                                  where key = ${key}
                                    and device_id = ${id}`
 
@@ -235,7 +282,7 @@ export class DB
                           values (${id}, ${existence}, to_timestamp(${timestamp})::timestamp)`
             }
         }
-        catch (e)
+        catch (e: any)
         {
             if (e.code === "23505")
             {
@@ -248,20 +295,39 @@ export class DB
         return 'inserted'
     }
 
-    public static async GetLogs(key: string, id: string)
+    public static async GetLogsOfDevice(key: string, id: string)
     {
         try
         {
             const {rows} = await sql`select time, existence
                                      from session
                                               natural join "user"
-                                              natural join device
+                                              join device on "user".user_id = device.owner
                                               natural join log
                                      where key = ${key}
                                        and device_id = ${id}
                                      order by time asc`
 
             return rows as { time: string, existence: boolean }[]
+        }
+        catch (e)
+        {
+            return null
+        }
+    }
+
+    public static async GetLogsUnderThisAccount(key: string)
+    {
+        try
+        {
+            const {rows} = await sql `select device_id, time, existence
+                                      from session
+                                               natural join "user"
+                                               join device on "user".user_id = device.owner
+                                               natural join log
+                                      where key = ${key}`
+
+            return rows as { device_id: string, time: string, existence: boolean }[]
         }
         catch (e)
         {

@@ -1,6 +1,8 @@
 .my-border {
+    appearance: unset;
     background: white;
     border: none;
+    border-radius: 0;
     box-shadow: 0 0 0 1px #333, 4px 4px 0 1px #0003;
 }
 
@@ -25,7 +27,6 @@
 
     &:disabled {
         cursor: not-allowed;
-
 
         &, &:hover, &:active {
             color: #3338;

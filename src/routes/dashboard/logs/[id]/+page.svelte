@@ -31,21 +31,24 @@
 </script>
 
 <svelte:head>
-    <title>Logs for {data.name}</title>
+    <title>Logs | {data.name}</title>
 </svelte:head>
 
 <nav style="display: flex; justify-content: space-between; align-items: center;">
-    <button id="btn-back" class="my-btn" onclick={() => goto("/dashboard")}>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+    <button id="btn-back" class="my-btn" onclick={() => goto("/dashboard")} style="height: 3rem; width: 3rem">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+        </svg>
     </button>
 
-    <div id="name" style="flex-grow: 1; text-align: center">
+    <div id="name" style="flex-grow: 1; text-align: center; font-size: 1.5rem">
         {data.name}
     </div>
 </nav>
 
-<p id="disclaimer">
-    Disclaimer: Your data will not be disclosed to the public nor be used in any research.
+<p id="disclaimer" style="font-size: 0.8rem; color: #aaa">
+    Your data will not be disclosed to the public nor be used in any forms of research.
 </p>
 
 <table class="my-border">
@@ -69,7 +72,7 @@
 </table>
 
 <style lang="scss">
-    @use "$lib/global.scss";
+    @use "$lib/global";
 
     table {
         border-collapse: collapse;
@@ -86,19 +89,5 @@
 
     td {
         border-top: 1px solid #333;
-    }
-
-    #btn-back {
-        height: 3rem;
-        width: 3rem;
-    }
-
-    #name {
-        font-size: 1.5rem;
-    }
-
-    #disclaimer {
-        font-size: 0.8rem;
-        color: #666;
     }
 </style>
