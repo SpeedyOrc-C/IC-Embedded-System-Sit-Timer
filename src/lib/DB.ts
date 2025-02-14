@@ -11,16 +11,18 @@ function RandomHexString(length: number)
 
 export function IntervalsFromLogs(_logs: { time: Date; existence: boolean }[]): { start: Date, end: Date }[]
 {
+    console.log(_logs)
+
     const logs = _logs.slice()
 
     // Remove first "stand up" record
-    if (logs.length > 0 && !logs[0].existence)
+    while (logs.length > 0 && !logs[0].existence)
     {
         logs.shift()
     }
 
     // Remove last "stand down" record
-    if (logs.length > 0 && logs[logs.length - 1].existence)
+    while (logs.length > 0 && logs[logs.length - 1].existence)
     {
         logs.pop()
     }
@@ -45,10 +47,16 @@ export function IntervalsFromLogs(_logs: { time: Date; existence: boolean }[]): 
         }
     }
 
+    console.log(normalizedLogs)
+
     const intervals: { start: Date, end: Date }[] = []
 
     for (let i = 0; i < normalizedLogs.length / 2; i += 1)
     {
+        const start = normalizedLogs[i * 2]
+        const end = normalizedLogs[i * 2 + 1]
+
+        console.log(start, end)
         intervals.push({start: normalizedLogs[i * 2].time, end: normalizedLogs[i * 2 + 1].time})
     }
 
