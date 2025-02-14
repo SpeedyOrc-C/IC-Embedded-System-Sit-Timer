@@ -178,7 +178,8 @@ nav {
    Main Content
 ============================== */
 main {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -188,7 +189,7 @@ section {
   margin-bottom: 2rem;
   border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 section h2 {
@@ -238,7 +239,7 @@ th {
 }
 .product-image {
   width: auto;
-  height: 30em;
+  height: 20em;
 }
 
 @media (max-width: 768px) {
