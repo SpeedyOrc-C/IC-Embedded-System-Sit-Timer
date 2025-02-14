@@ -1,0 +1,17 @@
+import {DB} from "$lib/DB";
+
+export async function POST({cookies})
+{
+    const key = cookies.get("session-key")
+
+    if (!key)
+    {
+        return new Response("Not logged in", {status: 401})
+    }
+
+    await DB.LogOutFromAllPlaces(key)
+
+    cookies.delete("session-key", {path: "/", secure: process.env.NODE_ENV != "development"})
+
+    return new Response("BYE")
+}

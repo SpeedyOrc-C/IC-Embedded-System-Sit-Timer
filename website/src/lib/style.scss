@@ -1,0 +1,309 @@
+/* ==============================
+   Shared Sitewide Styling
+============================== */
+
+/* --- Variables: Adjust Color Theme Here --- */
+:root {
+  --primary-bg: #0e6465;       /* Lighter teal */
+  --primary-bg-dark: #0b4a4b;  /* Darker teal */
+  --body-bg: #f0f6f6;          /* Soft background */
+  --text-color: #333333;       /* Default text color */
+  --white: #ffffff;
+}
+
+
+/* Header / Nav Bar */
+.nav-bar {
+  display: flex;                /* Put logo + menu items on one line */
+  align-items: center;          /* Vertically center items */
+  justify-content: space-between; /* Logo on left, menu on right */
+  padding: 0rem 2rem;
+  background: linear-gradient(90deg, var(--primary-bg), var(--primary-bg-dark));
+  color: var(--white);
+  /* Optional if you want a max-width container:
+  max-width: 1200px;
+  margin: 0 auto;
+  */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white); /* Ensure the logo text is white */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;     /* Horizontal list */
+  gap: 1.5rem;       /* Space between links */
+  margin: 0;         /* Remove default list margin */
+  padding: 0;        /* Remove default list padding */
+}
+
+.nav-menu li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* --- Global Reset & Base Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--body-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-bg);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-bg-dark);
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   Header (Navigation)
+============================== */
+header {
+  background: linear-gradient(90deg, var(--primary-bg), var(--primary-bg-dark));
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   Hero Section (Home Page Only)
+============================== */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  background: url("/index-img.jpeg")
+              center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--primary-bg);
+  color: var(--white);
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-bg-dark);
+}
+
+/* ==============================
+   Main Content
+============================== */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: var(--white);
+  margin-bottom: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+section h2 {
+  color: var(--primary-bg);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+section h3 {
+  color: var(--primary-bg);
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+ol, ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #e8f6f6;
+  font-weight: bold;
+}
+
+/* ==============================
+   Product Image Section
+   (Used on About Page)
+============================== */
+.product-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.product-image {
+  width: auto;
+  height: 30em;
+}
+
+@media (max-width: 768px) {
+  .product-image-container {
+    flex-direction: column;
+  }
+  
+  .product-image {
+    height: auto;
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+/* 
+.product-image-container img {
+  max-width: 100%;
+  height: 20em;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+} */
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background: var(--primary-bg-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   video section
+============================== */
+
+  .video-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+
+    video {
+      margin-top: 1em;
+      width: 80%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  }

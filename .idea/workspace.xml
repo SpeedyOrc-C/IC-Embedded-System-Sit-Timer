@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cd5c1c1-db02-45dd-b246-290d43703886" name="Changes" comment="Remove logs and re-arrangle files" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="EditableField" />
+        <option value="TypeScript File" />
+        <option value="+error" />
+        <option value="+layout" />
+        <option value="+page" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SpeedyOrc-C&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SpeedyOrc-C/IC-Embedded-System-24.git&quot;,
+    &quot;accountId&quot;: &quot;b8609796-e2cb-42ab-bd94-4a3257c7cc56&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2scLXEEjrmUwDmhS22WUja8doPE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="sortByType" value="true" />
+    <option name="sortKey" value="BY_TYPE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/src/routes/api/device/[id]/log/yes/[time]",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/website/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/routes/api/device/[id]/log/yes/[time]" />
+      <recent name="$PROJECT_DIR$/src/routes/dashboard" />
+      <recent name="$PROJECT_DIR$/src/routes/api/device/[id]/log/no" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website" />
+      <recent name="$PROJECT_DIR$/src/routes/dashboard/stats/daily" />
+      <recent name="$PROJECT_DIR$/src/routes/dashboard/logs/[id]" />
+      <recent name="$PROJECT_DIR$/src/routes/dashboard/[id]" />
+      <recent name="$PROJECT_DIR$/src/routes/dashboard" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cd5c1c1-db02-45dd-b246-290d43703886" name="Changes" comment="" />
+      <created>1738749953969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738749953969</updated>
+      <workItem from="1738749955174" duration="10000" />
+      <workItem from="1738749973088" duration="12000" />
+      <workItem from="1738749994163" duration="2853000" />
+      <workItem from="1738763307642" duration="5201000" />
+      <workItem from="1738849462896" duration="6492000" />
+      <workItem from="1738935822404" duration="289000" />
+      <workItem from="1738945466374" duration="787000" />
+      <workItem from="1738946287554" duration="5924000" />
+      <workItem from="1738968352596" duration="3641000" />
+      <workItem from="1739009737512" duration="14303000" />
+      <workItem from="1739206214599" duration="6759000" />
+      <workItem from="1739268353741" duration="4464000" />
+      <workItem from="1739273836753" duration="4795000" />
+      <workItem from="1739292726653" duration="2764000" />
+      <workItem from="1739353073615" duration="7522000" />
+      <workItem from="1739386113792" duration="15058000" />
+      <workItem from="1739444420935" duration="16191000" />
+      <workItem from="1739484256009" duration="133000" />
+      <workItem from="1739533551467" duration="921000" />
+      <workItem from="1739534512721" duration="284000" />
+    </task>
+    <task id="LOCAL-00001" summary="Add an API for testing">
+      <option name="closed" value="true" />
+      <created>1738764848267</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1738764848267</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Working...">
+      <option name="closed" value="true" />
+      <created>1739104367912</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739104367912</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: Severe logic error">
+      <option name="closed" value="true" />
+      <created>1739104551650</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739104551650</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Working...">
+      <option name="closed" value="true" />
+      <created>1739209725340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739209725340</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fix: Pairing has side effect, use POST">
+      <option name="closed" value="true" />
+      <created>1739210046614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739210046614</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Make it beautiful">
+      <option name="closed" value="true" />
+      <created>1739214837474</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739214837474</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fix: Center dashboard">
+      <option name="closed" value="true" />
+      <created>1739215091436</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739215091436</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Allow logging">
+      <option name="closed" value="true" />
+      <created>1739271232260</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1739271232260</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: See logs">
+      <option name="closed" value="true" />
+      <created>1739277305918</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739277305918</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: Handle load error with +error pages">
+      <option name="closed" value="true" />
+      <created>1739314271209</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1739314271209</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Allow specifying log time">
+      <option name="closed" value="true" />
+      <created>1739357487927</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739357487927</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Simplify">
+      <option name="closed" value="true" />
+      <created>1739358081284</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739358081284</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: Logging API reports duplicated records">
+      <option name="closed" value="true" />
+      <created>1739361127629</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1739361127629</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: See overall stat">
+      <option name="closed" value="true" />
+      <created>1739406347671</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1739406347671</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Almost complete everything">
+      <option name="closed" value="true" />
+      <created>1739477387947</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1739477387947</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fix: Graph shows fewer data than expected">
+      <option name="closed" value="true" />
+      <created>1739477669611</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1739477669611</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Complete everything">
+      <option name="closed" value="true" />
+      <created>1739482451539</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1739482451539</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: Logs not normalized correctly">
+      <option name="closed" value="true" />
+      <created>1739534136993</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1739534136993</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Remove logs and re-arrangle files">
+      <option name="closed" value="true" />
+      <created>1739534678278</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1739534678278</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add an API for testing" />
+    <MESSAGE value="fix: Severe logic error" />
+    <MESSAGE value="Working..." />
+    <MESSAGE value="fix: Pairing has side effect, use POST" />
+    <MESSAGE value="Make it beautiful" />
+    <MESSAGE value="fix: Center dashboard" />
+    <MESSAGE value="Allow logging" />
+    <MESSAGE value="feat: See logs" />
+    <MESSAGE value="fix: Handle load error with +error pages" />
+    <MESSAGE value="Allow specifying log time" />
+    <MESSAGE value="Simplify" />
+    <MESSAGE value="feat: Logging API reports duplicated records" />
+    <MESSAGE value="feat: See overall stat" />
+    <MESSAGE value="Almost complete everything" />
+    <MESSAGE value="fix: Graph shows fewer data than expected" />
+    <MESSAGE value="Complete everything" />
+    <MESSAGE value="fix: Logs not normalized correctly" />
+    <MESSAGE value="Remove logs and re-arrangle files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove logs and re-arrangle files" />
+  </component>
+</project>
