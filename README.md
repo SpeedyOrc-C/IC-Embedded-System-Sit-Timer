@@ -1,7 +1,7 @@
 # ELEC60013 Embedded Systems: Coursework 1
 ## SitSense Project Overview
 
-SitSense is an innovative smart monitoring system designed to track your sitting habits and help prevent health issues caused by prolonged sitting. This system uses a Raspberry Pi, a GPIO ultrasonic sensor, and an I2C flex sensor to detect when someone is seated and for how long.
+[SitSense](https://while-you-seat.speedyorc-chen.site) is an innovative smart monitoring system designed to track your sitting habits and help prevent health issues caused by prolonged sitting. This system uses a Raspberry Pi, a GPIO ultrasonic sensor, and an I2C flex sensor to detect when someone is seated and for how long.
 
 ## conponents
 
