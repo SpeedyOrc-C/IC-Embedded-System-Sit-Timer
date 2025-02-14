@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cd5c1c1-db02-45dd-b246-290d43703886" name="Changes" comment="Remove logs and re-arrangle files" />
+    <list default="true" id="5cd5c1c1-db02-45dd-b246-290d43703886" name="Changes" comment="Remove logs and re-arrangle files">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/device.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/pairing.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/session.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/website/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,27 +56,27 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/src/routes/api/device/[id]/log/yes/[time]",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "ts.external.directory.path": "/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/website/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/src/routes/api/device/[id]/log/yes/[time]&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/chenzhanming/Documents/GitHub/IC-Embedded-System-24/website/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/routes/api/device/[id]/log/yes/[time]" />
@@ -116,7 +125,8 @@
       <workItem from="1739444420935" duration="16191000" />
       <workItem from="1739484256009" duration="133000" />
       <workItem from="1739533551467" duration="921000" />
-      <workItem from="1739534512721" duration="284000" />
+      <workItem from="1739534512721" duration="509000" />
+      <workItem from="1739538706061" duration="2940000" />
     </task>
     <task id="LOCAL-00001" summary="Add an API for testing">
       <option name="closed" value="true" />
